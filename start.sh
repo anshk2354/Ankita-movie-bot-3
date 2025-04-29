@@ -5,7 +5,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/mxmoder/Ankita-bot-movie-.git /Ankita-bot-movie- 
+  git clone https://github.com/anshk2354/Ankita-bot-movie-.git /Ankita-bot-movie- 
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /Ankita-bot-movie- 
