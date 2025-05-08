@@ -1981,8 +1981,8 @@ async def auto_filter(client, msg, spoll=False):
             await client.send_message(req_channel, f"#REQUESTERS_LOGS \n\n**CONTENT NAME:**`{search}`\n**REQUESTED BY :** {message.from_user.first_name}\n**USER ID :**{message.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌺 Mark as Done 🏵️", callback_data="close_data")]]))
             l = await message.reply_text(text=f"**Hello {message.from_user.first_name}😎. \n\n`{search}` mod apk Not Found in Database\n\nAapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko `{search}` Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the `{search}` mod app in a few minutes.\n\n   ❣️ᴛʜᴀɴᴋ ʏᴏᴜ {message.from_user.first_name} ❣️**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('𝐔𝐩𝐥𝐨𝐚𝐝 𝐍𝐨𝐭𝐢𝐟𝐲', url='https://telegram.me/mxmoder'),
                                                                                                                                                                                                                                                                                                                                                                                                                                        InlineKeyboardButton('𝐑𝐞𝐪𝐮𝐞𝐬𝐭 mod apk', url='https://telegram.me/mxmoder_bot')]]))
-                await asyncio.sleep(20)
-                await l.delete()
+            await asyncio.sleep(20)
+            await l.delete()
             m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎 mod apk', url=f"https://t.me/mxmoder")]]) 
             )
@@ -2016,10 +2016,10 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         await client.send_message(req_channel, f"#REQUESTERS_LOGS \n\n**CONTENT NAME:**`{search}`\n**REQUESTED BY :** {message.from_user.first_name}\n**USER ID :**{message.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌺 Mark as Done 🏵️", callback_data="close_data")]]))
-            l = await message.reply_text(text=f"**Hello {message.from_user.first_name}😎. \n\n`{search}` mod apk Not Found in Database\n\nAapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko `{search}` Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the `{search}` mod app in a few minutes.\n\n   ❣️ᴛʜᴀɴᴋ ʏᴏᴜ {message.from_user.first_name} ❣️**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('𝐔𝐩𝐥𝐨𝐚𝐝 𝐍𝐨𝐭𝐢𝐟𝐲', url='https://telegram.me/mxmoder'),
+        l = await message.reply_text(text=f"**Hello {message.from_user.first_name}😎. \n\n`{search}` mod apk Not Found in Database\n\nAapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko `{search}` Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the `{search}` mod app in a few minutes.\n\n   ❣️ᴛʜᴀɴᴋ ʏᴏᴜ {message.from_user.first_name} ❣️**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('𝐔𝐩𝐥𝐨𝐚𝐝 𝐍𝐨𝐭𝐢𝐟𝐲', url='https://telegram.me/mxmoder'),
                                                                                                                                                                                                                                                                                                                                                                                                                                        InlineKeyboardButton('𝐑𝐞𝐪𝐮𝐞𝐬𝐭 mod apk', url='https://telegram.me/mxmoder_bot')]]))
-                await asyncio.sleep(20)
-                await l.delete()
+        await asyncio.sleep(20)
+        await l.delete()
         m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/mxmoder")]]) 
             )
