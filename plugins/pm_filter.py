@@ -1978,7 +1978,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker("CAACAgQAAxkBAAELX9hlyKPy4b52cxrdM3RMa1emV_qvkwACbg8AAuHqsVDaMQeY6CcRojQE",
+            m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko {search} Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the {search} mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎 mod apk', url=f"https://t.me/mxmoder")]]) 
             )
             search = search.lower()
@@ -1997,11 +1997,6 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
             if not files:
-                await client.send_message(req_channel, f"#REQUESTERS_LOGS \n\n**CONTENT NAME:**`{search}`\n**REQUESTED BY :** {message.from_user.first_name}\n**USER ID :**{message.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌺 Mark as Done 🏵️", callback_data="close_data")]]))
-                l = await message.reply_text(text=f"**Hello {message.from_user.first_name}😎. \n\n`{search}` mod apk Not Found in Database\n\n<a href='https://t.me/mxmoder_video_download/7'>हमें लगता है आपने spelling mistake किया है please search Google apk name</a>\n\nYour Request movie send admin will be uploaded some time please wait\n\n Join a 𝗨𝗣𝗟𝗢𝗔𝗗 𝗡𝗢𝗧𝗜𝗙𝗬 channel to get movie upload notifications You.\n\n   ❣️ᴛʜᴀɴᴋ ʏᴏᴜ {message.from_user.first_name} ❣️**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('𝐔𝐩𝐥𝐨𝐚𝐝 𝐍𝐨𝐭𝐢𝐟𝐲', url='https://telegram.me/mxmoder'),
-                                                                                                                                                                                                                                                                                                                                                                                                                                       InlineKeyboardButton('𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐌𝐨𝐯𝐢𝐞', url='https://telegram.me/mxmoder_bot')]]))
-                await asyncio.sleep(20)
-                await l.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
@@ -2013,7 +2008,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgQAAxkBAAELX9hlyKPy4b52cxrdM3RMa1emV_qvkwACbg8AAuHqsVDaMQeY6CcRojQE",
+        m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko {search} Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the {search} mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/mxmoder")]]) 
             )
         settings = await get_settings(message.chat.id)
