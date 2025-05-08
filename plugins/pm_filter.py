@@ -1981,8 +1981,6 @@ async def auto_filter(client, msg, spoll=False):
             m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎 mod apk', url=f"https://t.me/mxmoder")]]) 
             )
-            await asyncio.sleep(10)
-            await m.delete()
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2013,8 +2011,6 @@ async def auto_filter(client, msg, spoll=False):
         m=await message.reply_text("✅ **Aapka message send ho gaya hai.\nPlease wait... Kuch hi der mein aap ko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes**",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/mxmoder")]]) 
             )
-        await asyncio.sleep(10)
-        await m.delete()
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
