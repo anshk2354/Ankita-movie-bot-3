@@ -28,14 +28,10 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/+Az_CHIVozrVjMWI1"),
-                    InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://telegram.me/hd_telegram_movies')
-                ],[
-                    InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
-                ],[  
                     InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                ],[
+                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
+                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_owner')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -50,14 +46,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/+Az_CHIVozrVjMWI1"),
-                    InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://telegram.me/hd_telegram_movies')
-                ],[
-                    InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
-                ],[
                     InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                ],[
+                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
+                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_owner')
                  ]]
                     
         
@@ -82,8 +74,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton("❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
-            ],[
-                InlineKeyboardButton('🤔 Why Iam Join🤔', callback_data='sinfo')
+                
             ]
         ]
 
@@ -96,19 +87,17 @@ async def start(client, message):
         await client.send_photo(
             chat_id=message.from_user.id,
             photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
-            caption="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            caption="**You are not in our channel mentioned below, so you are not getting the Mod APK file...\n\nIf you want the Mod APK file, click on the '🍿 Join Our Back-Up Channel 🍿' button below and join our back-up channel.\n\nThen click on the '🔄 Try Again' button below...\n\nAfter that, you will get access to the Mod APK files...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
                 ],[
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=CHNL_LNK),
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-                ],[
-                    InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
+                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
+                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_owner')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -161,7 +150,7 @@ async def start(client, message):
                         [
                             [
                                 InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK),
-                                InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
+                                InlineKeyboardButton(' SUPPORT CHANNEL', url='https://t.me/mxmoder_support')
                             ],[
                                 InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -179,8 +168,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://telegram.me/hd_telegram_movies'),
-                          InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
+                          InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK),
+                                InlineKeyboardButton(' SUPPORT CHANNEL', url='https://t.me/mxmoder_support')
                        ],[ 
                           InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                             ]
@@ -323,7 +312,7 @@ async def start(client, message):
                     InlineKeyboardButton("⚡ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғɪᴇᴅ ⚡",url='https://t.me/mxmoder_video_download/6')
                    ]]
                 await message.reply_text(
-                    text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 16 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ ! \n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 16 घंटे तक unlimited फिल्मों  प्राप्त कर सकें</b>",
+                    text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴏᴅ ᴀᴘᴋs ᴜɴᴛɪʟ 24 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ!\n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 24 घंटे तक unlimited ᴍᴏᴅ ᴀᴘᴋs प्राप्त कर सकें</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -337,7 +326,7 @@ async def start(client, message):
                     [
                      [
                       InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK),
-                      InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
+                                InlineKeyboardButton(' SUPPORT CHANNEL', url='https://t.me/mxmoder_support')
                    ],[
                       InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
 
@@ -388,7 +377,7 @@ async def start(client, message):
                     InlineKeyboardButton("⚡ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғɪᴇᴅ ⚡",url='https://t.me/mxmoder_video_download/6')
                    ]]
                 await message.reply_text(
-                    text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 16 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ ! \n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 16 घंटे तक unlimited फिल्मों  प्राप्त कर सकें</b>",
+                    text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴏᴅ ᴀᴘᴋs ᴜɴᴛɪʟ 24 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ!\n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 24 घंटे तक unlimited ᴍᴏᴅ ᴀᴘᴋs प्राप्त कर सकें</b>",
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -400,8 +389,8 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                      InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK),
+                                InlineKeyboardButton(' SUPPORT CHANNEL', url='https://t.me/mxmoder_support')
                    ],[
                       InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
                      ]
@@ -448,7 +437,7 @@ async def start(client, message):
             InlineKeyboardButton("⚡ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғɪᴇᴅ ⚡",url='https://t.me/mxmoder_video_download/6')
          ]]
         await message.reply_text(
-            text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴜɴᴛɪʟ 16 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ ! \n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 16 घंटे तक unlimited फिल्मों  प्राप्त कर सकें</b>",
+            text="<b>Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nKɪɴᴅʟʏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ Sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ᴀᴄᴄᴇss ᴛᴏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴘʀᴇᴍɪᴜᴍ ᴍᴏᴅ ᴀᴘᴋs ᴜɴᴛɪʟ 24 ʜᴏᴜʀs ғʀᴏᴍ ɴᴏᴡ!\n\nआप verified नहीं हैं ! \nकृपया जारी रखने के लिए verify करें ताकि आप अब से 24 घंटे तक unlimited ᴍᴏᴅ ᴀᴘᴋs प्राप्त कर सकेंें</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -462,7 +451,7 @@ async def start(client, message):
             [
              [
               InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK),
-              InlineKeyboardButton('REQUEST MOVIE CHANNEL', url='https://t.me/+PLWg_EtJG8UwN2Y1')
+                                InlineKeyboardButton(' SUPPORT CHANNEL', url='https://t.me/mxmoder_support')
            ],[
               InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
              ]
