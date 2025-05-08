@@ -41,44 +41,46 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
             await db.add_chat(message.chat.id, message.chat.title)
         return 
-    if not await db.is_user_exist(message.from_user.id):
-        await db.add_user(message.from_user.id, message.from_user.first_name)
-        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
-    if len(message.command) != 2:
-        buttons = [[
-                    InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/mxmoder")
-                ],[
-                    InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
-                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmoder_bot')
-                 ]]
-                    
-        
-        reply_markup = InlineKeyboardMarkup(buttons)
+if not await db.is_user_exist(message.from_user.id):
+    await db.add_user(message.from_user.id, message.from_user.first_name)
+    await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
 
-# Sticker ki jagah message send karna
-m = await message.reply_text(
-    "✅ Aapka message send ho gaya hai.\nPlease wait... Kuchh hi der mein aapko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes"
-)
-
-# 20 second wait karo fir message delete karo
-await asyncio.sleep(20)
-await m.delete()
-
-# Uske baad image send karo with caption and buttons
-await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-        return
+if len(message.command) != 2:
+    buttons = [[
+        InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/mxmoder")
+    ],[
+        InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
+        InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmoder_bot')
+    ]]
     
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
-        try:
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
+    reply_markup = InlineKeyboardMarkup(buttons)
+
+    # Sticker ki jagah message send karna
+    m = await message.reply_text(
+        "✅ Aapka message send ho gaya hai.\nPlease wait... Kuchh hi der mein aapko Mod APK mil jaega.\n\nYour message has been sent.\nYou will receive the mod app in a few minutes"
+    )
+
+    # 20 second wait karo fir message delete karo
+    await asyncio.sleep(20)
+    await m.delete()
+
+    # Uske baad image send karo with caption and buttons
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        reply_markup=reply_markup,
+        parse_mode=enums.ParseMode.HTML
+    )
+    
+    return  # Yeh return ab sahi jagah par hai
+
+# Yeh block tab chalega jab command length 2 ho AND user subscribed na ho
+if AUTH_CHANNEL and not await is_subscribed(client, message):
+    try:
+        invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+    except ChatAdminRequired:
+        logger.error("Make sure Bot is admin in Forcesub channel")
+        return
         btn = [
             [
                 InlineKeyboardButton("❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
