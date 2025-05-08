@@ -31,7 +31,7 @@ async def start(client, message):
                     InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/mxmoder")
                 ],[
                     InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
-                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_bot')
+                    InlineKeyboardButton('BOT OWNER ', url='https://t.me/mxmoder_bot')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -49,7 +49,7 @@ async def start(client, message):
                     InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/mxmoder")
                 ],[
                     InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
-                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_bot')
+                    InlineKeyboardButton('BOT OWNER ', url='https://t.me/mxmoder_bot')
                  ]]
                     
         
@@ -97,7 +97,7 @@ async def start(client, message):
                     InlineKeyboardButton('Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url="https://t.me/mxmoder")
                 ],[
                     InlineKeyboardButton('✪ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url="https://t.me/mxmoder_support"),
-                    InlineKeyboardButton('BOT OWNER ', url='https://telegram.me/mxmode_bot')
+                    InlineKeyboardButton('BOT OWNER ', url='https://t.me/mxmoder_bot')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
