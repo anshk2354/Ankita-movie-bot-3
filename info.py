@@ -90,10 +90,10 @@ PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Us
 
 MELCOW_VID = -1002655668331  # yeh ek Telegram channel/group ID ho sakta hai
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/vj_bot_disscussion')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/vj_botz')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'vj_bot_disscussion') # Support Chat Link Without https:// or @
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/kingvj01')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/mxmoder_support')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/mxmoder_support')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mxmoder_support') # Support Chat Link Without https:// or @
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mxmoder_bot')
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
@@ -114,7 +114,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 
 # Token Verification Info :
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'indianshortner.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '23e1a29b37b7b23a15b449b783600dc1e3b3fab1')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', '')
