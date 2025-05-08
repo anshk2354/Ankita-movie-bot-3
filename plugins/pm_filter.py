@@ -1987,7 +1987,7 @@ async def auto_filter(client, msg, spoll=False):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎 mod apk', url=f"https://t.me/mxmoder")]]) 
             )
             await asyncio.sleep(10)
-                await m.delete()
+            await m.delete()
             search = search.lower()
             find = search.split(" ")
             search = ""
