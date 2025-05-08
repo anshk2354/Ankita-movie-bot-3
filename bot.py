@@ -57,7 +57,7 @@ api_hash = "68e791e616100248b0a53ae86a661a12"
 bot_token = "7727851467:AAHk7TKozXNgMq6ErDRI-CiueF5x_dQPTWY"
 
 with Client("bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token) as app:
-    app.send_message(chat_id=-1002437606216, text="Bot connected successfully!")
+    app.send_message(chat_id=-1001694820818, text="Bot connected successfully!")
 
 
 async def Lazy_start():
