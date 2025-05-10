@@ -11,8 +11,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', '13323016'))
-API_HASH = environ.get('API_HASH', '68e791e616100248b0a53ae86a661a12')
+API_ID = int(environ.get('API_ID', '25669196'))
+API_HASH = environ.get('API_HASH', '3d6f1fc219a1de27aa4696c0ca9f14e5')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
@@ -21,7 +21,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/dd3308067244a44d9ded1.jpg h
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '-1083324269 6604799590').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7732405661').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '-1002655668331').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
@@ -71,7 +71,7 @@ O_DB_URI = environ.get('O_DB_URI', "")   # This Db Is For Other Data Store
 F_DB_URI = environ.get('F_DB_URI', "")   # This Db Is For File Data Store
 S_DB_URI = environ.get('S_DB_URI', "")   # This Db is for File Data Store When First Db Is Going To Be Full.
 
-PREMIUM_USER = [-1083324269]
+PREMIUM_USER = [7732405661]
 
 # Premium And Referal Settings
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set Ture Or False
